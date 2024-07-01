@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar datos del dueño</title>
+    <link rel="stylesheet" href="css/owner_details.css">
+</head>
+<body>
+    <div class="container">
+        <a href="dashboard.html">Ir al inicio</a><br><br>
+        <a href="owner_hash.html">Obtener hash del dueño</a><br>
+        <h1>Consultar datos del dueño</h1>
+
+        <!-- Formulario para consultar datos del propietario -->
+        <div class="form-container">
+            <h2>Buscar dueño</h2>
+            <form id="getOwnerDetailsForm">
+                <label for="ownerHash">Hash del dueño:</label>
+                <input type="text" id="ownerHash" name="ownerHash" required>
+                <button type="button" id="getOwnerDetailsButton">Consultar</button>
+            </form>
+        </div>
+
+        <!-- Mostrar detalles del propietario -->
+        <div class="details-container">
+            <h2>Detalles del dueño</h2>
+            <div id="ownerDetails"></div>
+        </div>
+    </div>
+    <script src="js/owner_details.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>

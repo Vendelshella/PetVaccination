@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veterinario - Veterinaria</title>
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+    <!-- conseguir hash integrity: https://www.srihash.org -->
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a la Veterinaria</h1>
+        <div class="login-box">
+            <h2>Iniciar Sesión</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="metamask-address">Tu dirección de Metamask:</label>
+                    <div id="metamask-address" class="div-address"></div>
+                </div>
+                <button type="button" id="loginButton">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

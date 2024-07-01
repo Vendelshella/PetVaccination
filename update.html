@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Registros</title>
+    <link rel="stylesheet" href="css/update.css">
+</head>
+<body>
+    <div class="container">
+        <a href="dashboard.html">Ir al inicio</a><br>
+
+        <h1>Actualizar Registros</h1>
+
+        <!-- Actualizar Propietario -->
+        <div class="form-container">
+            <h2>Actualizar Propietario</h2>
+            <form>
+                <label for="ownerHash">Owner Hash:</label>
+                <input type="text" id="ownerHash" name="ownerHash" required>
+
+                <label for="newName">Nuevo Nombre:</label>
+                <input type="text" id="newName" name="newName">
+
+                <label for="newDNI">Nuevo DNI:</label>
+                <input type="text" id="newDNI" name="newDNI">
+
+                <label for="newEmail">Nuevo Email:</label>
+                <input type="email" id="newEmail" name="newEmail">
+
+                <label for="newPostalAddress">Nueva Dirección Postal:</label>
+                <input type="text" id="newPostalAddress" name="newPostalAddress">
+
+                <label for="newPhoneNumber">Nuevo Número de Teléfono:</label>
+                <input type="tel" id="newPhoneNumber" name="newPhoneNumber">
+
+                <button type="button" id="updateOwnerForm">Actualizar Propietario</button>
+            </form>
+        </div>
+
+        <!-- Actualizar Mascota -->
+        <div class="form-container">
+            <h2>Actualizar Mascota</h2>
+            <form>
+                <label for="petId">ID de la Mascota:</label>
+                <input type="text" id="petId" name="petId" required>
+
+                <label for="newPetName">Nuevo Nombre:</label>
+                <input type="text" id="newPetName" name="newPetName">
+
+                <label for="newSpecies">Nueva Especie:</label>
+                <input type="text" id="newSpecies" name="newSpecies">
+
+                <label for="newBreed">Nueva Raza:</label>
+                <input type="text" id="newBreed" name="newBreed">
+
+                <label for="newDob">Nueva Fecha de Nacimiento:</label>
+                <input type="date" id="newDob" name="newDob">
+
+                <label for="newSex">Nuevo Sexo:</label>
+                <input type="text" id="newSex" name="newSex">
+
+                <label for="newColor">Nuevo Color:</label>
+                <input type="text" id="newColor" name="newColor">
+
+                <button type="button" id="updatePetForm">Actualizar Mascota</button>
+            </form>
+        </div>
+
+        <!-- Actualizar Vacuna -->
+        <div class="form-container">
+            <h2>Actualizar Vacuna</h2>
+            <form>
+                <label for="petIdVaccination">ID de la Mascota:</label>
+                <input type="text" id="petIdVaccination" name="petIdVaccination" required>
+
+                <label for="vaccinationIndex">Índice de la Vacuna:</label>
+                <input type="number" id="vaccinationIndex" name="vaccinationIndex" required>
+
+                <label for="newVaccineType">Nuevo Tipo de Vacuna:</label>
+                <input type="text" id="newVaccineType" name="newVaccineType">
+
+                <label for="newLotNumber">Nuevo Número de Lote:</label>
+                <input type="text" id="newLotNumber" name="newLotNumber">
+
+                <label for="newAdministrationDate">Nueva Fecha de Administración:</label>
+                <input type="date" id="newAdministrationDate" name="newAdministrationDate">
+
+                <label for="newNextVaccinationDate">Nueva Fecha de Próxima Vacunación:</label>
+                <input type="date" id="newNextVaccinationDate" name="newNextVaccinationDate">
+
+                <label for="newDose">Nueva Dosis:</label>
+                <input type="text" id="newDose" name="newDose">
+
+                <label for="newVetLicense">Nueva Licencia del Veterinario:</label>
+                <input type="text" id="newVetLicense" name="newVetLicense">
+
+                <label for="newClinicName">Nuevo Nombre de la Clínica:</label>
+                <input type="text" id="newClinicName" name="newClinicName">
+
+                <button type="button" id="updateVaccinationForm">Actualizar Vacuna</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/update.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>

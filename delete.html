@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borrar Registros</title>
+    <link rel="stylesheet" href="css/delete.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <a href="dashboard.html">Ir al inicio</a>
+        <h1>Borrar Registros</h1>
+
+        <!-- Borrar Propietario -->
+        <div class="form-container">
+            <h2>Borrar Propietario</h2>
+            <form>
+                <label for="ownerHash">Hash del Propietario:</label>
+                <input type="text" id="ownerHash" name="ownerHash" required>
+                <button type="button" id="deleteOwnerForm">Borrar Propietario</button>
+            </form>
+        </div>
+
+        <!-- Borrar Mascota -->
+        <div class="form-container">
+            <h2>Borrar Mascota</h2>
+            <form>
+                <label for="petId">ID de la Mascota:</label>
+                <input type="text" id="petId" name="petId" required>
+                <button type="button" id="deletePetForm">Borrar Mascota</button>
+            </form>
+        </div>
+
+        <!-- Borrar Vacuna -->
+        <div class="form-container">
+            <h2>Borrar Vacuna</h2>
+            <form>
+                <label for="petIdVaccination">ID de la Mascota:</label>
+                <input type="text" id="petIdVaccination" name="petIdVaccination" required>
+                <label for="vaccinationIndex">Índice de la Vacuna:</label>
+                <input type="number" id="vaccinationIndex" name="vaccinationIndex" required>
+                <button type="button" id="deleteVaccinationForm">Borrar Vacuna</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/delete.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>

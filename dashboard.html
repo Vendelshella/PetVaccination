@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard del Veterinario</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/authentication.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, Veterinario</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="registration.html">Registrar</a></li>
+            <li class="submenu">
+                <a href="#consult">Consultar</a>
+                <ul class="dropdown">
+                    <li><a href="owner_hash.html">Hash del dueño</a></li>
+                    <li><a href="id_mascota.html">ID de la mascota</a></li>
+                    <li><a href="owner_details.html">Consultar datos del dueño</a></li>
+                    <li><a href="pet_details.html">Consultar datos de la mascota</a></li>
+                    <li><a href="vaccination_history.html">Historial de vacunación</a></li>
+                </ul>
+            </li>
+            <li><a href="update.html">Actualizar</a></li>
+            <li><a href="delete.html">Eliminar</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="welcome">
+            <h2>Bienvenido al Sistema de Gestión de Vacunación de Mascotas</h2>
+            <p><a href="info.html">Pincha aquí</a> para obtener información sobre cómo usar esta aplicación.</p>
+        </section>
+    </main>
+</body>
+</html>

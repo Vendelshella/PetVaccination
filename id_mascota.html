@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar mascotas</title>
+    <link rel="stylesheet" href="css/id_mascota.css">
+    
+</head>
+<body>
+    <div class="container">
+        <a href="dashboard.html">Ir al inicio</a>
+        <br><br>
+        <a href="owner_hash.html">Obtener el hash del dueño</a>
+
+        <h1>Consultar mascotas mediante el hash del dueño</h1>
+        <div class="form-container">
+            <form>
+                <label for="ownerHash">Hash del dueño:</label>
+                <input type="text" id="ownerHash" name="ownerHash" required>
+                <button type="button" id="getPetIdsForm">Consultar</button>
+            </form>
+        </div>
+        <div class="result-container">
+            <h2>IDs de las mascotas</h2>
+            <ul id="petIdsList"></ul>
+        </div>
+    </div>
+    <script src="js/id_mascota.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>

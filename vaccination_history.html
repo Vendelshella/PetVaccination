@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Historial de Vacunación</title>
+    <link rel="stylesheet" href="css/vaccination_history.css">
+</head>
+<body>
+    <div class="container">
+        <a href="dashboard.html">Ir al inicio</a>
+        <h1>Consultar historial de vacunación</h1>
+
+        <!-- Consultar Historial de Vacunación -->
+        <div class="form-container">
+            <h2>Consultar Vacunas</h2>
+            <form>
+                <label for="petId">ID de la Mascota:</label>
+                <input type="text" id="petId" name="petId" required>
+
+                <button type="button" id="getVaccinationHistoryForm">Consultar Vacuna</button>
+            </form>
+        </div>
+
+        <div id="vaccinationResult" class="result-container">
+            <!-- Aquí se mostrará el resultado -->
+        </div>
+    </div>
+    <script src="js/vaccination_history.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>

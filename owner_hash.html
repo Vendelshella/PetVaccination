@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Hash de Dueño</title>
+    <script src="js/owner_hash.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/owner_hash.css">
+</head>
+<body>
+    <a href="registration.html">Ir al registro</a>
+    <br>
+    <a href="dashboard.html">Ir al inicio</a>
+    <h1>Consultar hash</h1>
+    <form id="ownerHashForm">
+        <label for="dni">DNI del Dueño:</label>
+        <input type="text" id="dni" name="dni" required>
+        <button type="button" id="dniButton">Consultar Hash</button>
+    </form>
+    <div id="result">
+        <!-- Aquí va el hash -->
+    </div>
+
+</body>
+</html>

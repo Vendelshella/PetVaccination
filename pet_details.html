@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar datos de la mascota</title>
+    <link rel="stylesheet" href="css/pet_details.css">
+</head>
+<body>
+    <div class="container">
+        <a href="dashboard.html">Ir al inicio</a><br><br>
+        <a href="id_mascota.html">Obtener ID de la mascota</a><br>
+        <h1>Consultar datos de la mascota</h1>
+
+        <!-- Formulario para consultar datos de la mascota -->
+        <div class="form-container">
+            <h2>Buscar mascota</h2>
+            <form id="getPetDetailsForm">
+                <label for="petId">ID de la Mascota:</label>
+                <input type="text" id="petId" name="petId" required>
+                <button type="button" id="getPetDetailsButton">Consultar</button>
+            </form>
+        </div>
+
+        <!-- Mostrar detalles de la mascota -->
+        <div class="details-container">
+            <h2>Detalles de la mascota</h2>
+            <div id="petDetails"></div>
+        </div>
+    </div>
+    <script src="js/pet_details.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>

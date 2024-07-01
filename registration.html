@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Vaccination</title>
+    <link rel="stylesheet" href="css/registration.css">
+</head>
+<body>
+    <a href="dashboard.html">Ir al inicio</a>
+    <br>
+    <h1>Pet Vaccination</h1>
+
+    <h2>Registrar Dueño</h2>
+    <form id="registerOwnerForm">
+        <label for="ownerName">Nombre:</label>
+        <input type="text" id="ownerName" required>
+        <label for="ownerDNI">DNI:</label>
+        <input type="text" id="ownerDNI" required>
+        <label for="ownerEmail">Email:</label>
+        <input type="email" id="ownerEmail" required>
+        <label for="ownerPostalAddress">Dirección Postal:</label>
+        <input type="text" id="ownerPostalAddress" required>
+        <label for="ownerPhoneNumber">Teléfono:</label>
+        <input type="text" id="ownerPhoneNumber" required>
+        <button type="button" id="registerOwnerButton">Registrar Dueño</button>
+        <button type="reset">Limpiar Formulario</button>
+        <label for="">¿El dueño ya está registrado?</label>
+        <a href="owner_hash.html">Consultar su hash aquí</a>
+    </form>
+
+    <h2>Registrar Mascota</h2>
+    <form id="registerPetForm">
+        <label for="petId">ID de la Mascota:</label>
+        <input type="text" id="petId" required>
+        <label for="petName">Nombre:</label>
+        <input type="text" id="petName" required>
+        <label for="petSpecies">Especie:</label>
+        <input type="text" id="petSpecies" required>
+        <label for="petBreed">Raza:</label>
+        <input type="text" id="petBreed" required>
+        <label for="petDob">Fecha de Nacimiento:</label>
+        <input type="date" id="petDob" required>
+        <label for="petSex">Sexo:</label>
+        <input type="text" id="petSex" required>
+        <label for="petColor">Color:</label>
+        <input type="text" id="petColor" required>
+        <label for="ownerHash">Hash del Dueño:</label>
+        <input type="text" id="ownerHash" required>
+        <button type="button" id="registerPetButton">Registrar Mascota</button>
+        <button type="reset">Limpiar Formulario</button>
+    </form>
+
+    <h2>Registrar Vacunación</h2>
+    <form id="registerVaccinationForm">
+        <label for="vaccinationPetId">ID de la Mascota:</label>
+        <input type="text" id="vaccinationPetId" required>
+        <label for="vaccineType">Tipo de Vacuna:</label>
+        <input type="text" id="vaccineType" required>
+        <label for="lotNumber">Número de Lote:</label>
+        <input type="text" id="lotNumber" required>
+        <label for="administrationDate">Fecha de Administración:</label>
+        <input type="date" id="administrationDate" required>
+        <label for="nextVaccinationDate">Próxima Fecha de Vacunación:</label>
+        <input type="date" id="nextVaccinationDate">
+        <label for="dose">Dosis:</label>
+        <input type="text" id="dose" required>
+        <label for="vetLicense">Licencia del Veterinario:</label>
+        <input type="text" id="vetLicense" required>
+        <label for="clinicName">Nombre de la Clínica:</label>
+        <input type="text" id="clinicName" required>
+        <button type="button" id="addVaccinationButton">Registrar Vacunación</button>
+        <button type="reset">Limpiar Formulario</button>
+    </form>
+
+    <script src="js/registration.js" type="module"></script>
+    <script src="js/authentication.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5/dist/ethers.umd.min.js" integrity="sha384-Htz1SE4Sl5aitpvFgr2j0sfsGUIuSXI6t8hEyrlQ93zflEF3a29bH2AvkUROUw7J" crossorigin="anonymous"></script>
+</body>
+</html>
