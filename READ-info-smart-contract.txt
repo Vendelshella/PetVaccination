@@ -1,0 +1,111 @@
+# PetVaccination Smart Contract
+
+This smart contract allows veterinarians to register pet owners, pets, and their vaccination records. It ensures that only authorized veterinarians can interact with the system, and it provides various functions to manage pet and owner data securely.
+
+## Contract Overview
+
+The `PetVaccination` contract provides the following features:
+- Register pet owners with personal details.
+- Register pets with their details and link them to their owners.
+- Add, update, and delete vaccination records for pets.
+- Allow only authorized veterinarians to perform specific actions.
+- Retrieve information about pets, owners, and vaccination histories.
+
+## Contract Details
+
+### Structures
+
+- **Owner**: Stores information about the pet owner.
+  - `name`: Owner's name.
+  - `dni`: Owner's DNI (Identification Number).
+  - `email`: Owner's email address.
+  - `postalAddress`: Owner's postal address.
+  - `phoneNumber`: Owner's phone number.
+
+- **Pet**: Stores information about the pet.
+  - `id`: Pet's unique identifier.
+  - `name`: Pet's name.
+  - `species`: Pet's species.
+  - `breed`: Pet's breed.
+  - `dob`: Pet's date of birth.
+  - `sex`: Pet's sex.
+  - `color`: Pet's color.
+  - `ownerHash`: Hash of the owner's details.
+
+- **Vaccination**: Stores information about a vaccination.
+  - `vaccineType`: Type of vaccine administered.
+  - `lotNumber`: Vaccine lot number.
+  - `administrationDate`: Date of vaccine administration.
+  - `nextVaccinationDate`: Date of the next scheduled vaccination.
+  - `dose`: Vaccine dose.
+  - `vetLicense`: License number of the veterinarian administering the vaccine.
+  - `clinicName`: Name of the clinic where the vaccine was administered.
+
+### Variables
+
+- `contractOwner`: The address of the contract owner.
+- `authorizedVets`: Mapping to track authorized veterinarians.
+- `pets`: Mapping to store pets using their unique identifier.
+- `vaccinations`: Mapping to store vaccination records for each pet.
+- `petOwnerHash`: Mapping to link pets to their owner's hash.
+- `owners`: Mapping to store owner details using their hash.
+- `dniToOwnerHash`: Mapping to link DNI to the owner's hash.
+- `petIds`: Array to keep track of all pet IDs.
+
+### Modifiers
+
+- `onlyContractOwner`: Restricts function access to the contract owner.
+- `onlyAuthorizedVet`: Restricts function access to authorized veterinarians.
+
+### Constructor
+
+- `constructor()`: Initializes the contract owner as the address deploying the contract.
+
+### Functions
+
+#### Contract Owner Functions
+
+- `addAuthorizedVet(address vet)`: Adds a veterinarian to the list of authorized vets.
+- `removeAuthorizedVet(address vet)`: Removes a veterinarian from the list of authorized vets.
+- `isAuthorizedVet(address vet)`: Checks if a veterinarian is authorized.
+
+#### Create Functions
+
+- `calculateOwnerHash(...)`: Calculates a hash for the owner's details.
+- `registerPetOwner(...)`: Registers a new pet owner and returns their hash.
+- `registerPet(...)`: Registers a new pet.
+- `addVaccination(...)`: Adds a new vaccination record for a pet.
+
+#### Read Functions
+
+- `getVaccinationHistory(string memory petId)`: Returns the vaccination history for a pet.
+- `getPetDetails(string memory petId)`: Returns the details of a pet.
+- `getPetIdsByOwnerHash(bytes32 ownerHash)`: Returns a list of pet IDs associated with an owner's hash.
+- `getOwnerDetails(bytes32 ownerHash)`: Returns the details of an owner.
+- `getOwnerHashByDNI(string memory ownerDNI)`: Returns the owner's hash based on their DNI.
+
+#### Update Functions
+
+- `updatePetOwner(...)`: Updates the details of a registered pet owner.
+- `updatePet(...)`: Updates the details of a registered pet.
+- `updateVaccination(...)`: Updates an existing vaccination record.
+
+#### Delete Functions
+
+- `deletePet(string memory petId)`: Deletes a registered pet and its vaccination records.
+- `deleteOwner(bytes32 ownerHash)`: Deletes a registered owner.
+- `deleteVaccination(string memory petId, uint256 index)`: Deletes a vaccination record for a pet.
+
+## Usage
+
+1. **Deploy the contract**: Deploy the contract to the Ethereum blockchain.
+2. **Authorize veterinarians**: The contract owner adds veterinarians to the list of authorized users.
+3. **Register pet owners and pets**: Authorized veterinarians register pet owners and their pets.
+4. **Add vaccinations**: Authorized veterinarians add vaccination records for registered pets.
+5. **Retrieve information**: Authorized veterinarians can retrieve pet, owner, and vaccination details.
+6. **Update records**: Authorized veterinarians can update owner, pet, and vaccination records as needed.
+7. **Delete records**: Authorized veterinarians can delete pet, owner, and vaccination records when necessary.
+
+## License
+
+This project is licensed under the MIT License.
