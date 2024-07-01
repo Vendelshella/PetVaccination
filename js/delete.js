@@ -7,13 +7,15 @@ const signer = provider.getSigner();
 const contract = new ethers.Contract(contractAddress, ABI, signer);
 
 async function deleteOwner(ownerHash) {
-    try {
-        const tx = await contract.deleteOwner(ownerHash);
-        await tx.wait();
-        alert("Propietario borrado con éxito");
-    } catch (error) {
-        console.error(error);
-        alert("Error borrando propietario");
+    if (confirm("Antes de eliminar definitivamente el antiguo dueño de la mascota, asegurate de registrar al nuevo dueño de la mascota, luego obtener su hash y vincularlo con la mascota actualizando los datos de la misma. Los hashes son importantes para consultar los datos de las mascotas. ¿Estás seguro de que quieres borrarlo?")){
+        try {
+            const tx = await contract.deleteOwner(ownerHash);
+            await tx.wait();
+            alert("Propietario borrado con éxito");
+        } catch (error) {
+            console.error(error);
+            alert("Error borrando propietario");
+        }
     }
 }
 

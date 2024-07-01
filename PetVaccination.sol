@@ -316,9 +316,6 @@ contract PetVaccination {
         require(bytes(pets[petId].id).length != 0, "Pet not found");
         delete pets[petId];
         delete vaccinations[petId];
-        // También es posible eliminar referencias relacionadas como:
-        // delete petOwnerHash[petId];
-        // Se deben manejar dependencias y cascadas de borrado según sea necesario
 
         // Find and remove petId from petIds array
         for (uint256 i = 0; i < petIds.length; i++) {
@@ -339,7 +336,6 @@ contract PetVaccination {
         // Remove the mapping from DNI to ownerHash
         delete dniToOwnerHash[ownerDNI];
         
-        // Delete owner
         delete owners[ownerHash];
     }
 
@@ -347,7 +343,6 @@ contract PetVaccination {
         require(bytes(pets[petId].id).length != 0, "Pet not found");
         require(index < vaccinations[petId].length, "Invalid vaccination index");
         delete vaccinations[petId][index];
-        // Asegúrate de manejar la estructura de datos para eliminar y reorganizar según sea necesario
     }
 
 }
